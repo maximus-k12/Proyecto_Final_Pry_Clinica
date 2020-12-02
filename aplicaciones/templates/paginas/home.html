@@ -1,0 +1,117 @@
+{% extends 'paginas/base.html' %}
+{% load static %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.slider').bxSlider({
+            mode: 'fade',//horizontal, vertical, fade
+            auto: true,
+            pause: 2000
+        });
+    });
+</script>
+{%endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+{%endblock %}
+
+{% block contenido %}
+
+<div class="slider">
+    <div>
+        <img src="{% static 'app/img/banner/v3.png'%}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'app/img/banner/v2.jpg'%}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'app/img/banner/v4.png'%}" alt="">
+    </div>
+    <div>
+        <img src="{% static 'app/img/banner/v5.jpg'%}" alt="">
+    </div>    
+</div>
+
+
+<div class="texto_centrado">
+<h1>Contamos con:</h1>
+</div>
+
+
+<div class="productos">
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/neu.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+            <h1>Neurologia</h1>
+        </div>
+    </div>
+</div>
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/car.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+            <h1>Cardiologia</h1>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/ped.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+             <h1>Pediatria</h1>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/der.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+            <h1>Dermatologia</h1>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/gin.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+            <h1>Ginecologia</h1>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/trau.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+            <h1>Traumatologia</h1>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/pls.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+            <h2>Rinoplastia</h2>
+        </div>
+    </div>
+</div>
+
+<div class="producto">
+    <div class="contenedor_producto">
+        <img src="{% static 'app/img/gas.jpg'%}" alt="imagen producto">
+        <div class="detalle">
+            <h2>Gastroenterologia</h2>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

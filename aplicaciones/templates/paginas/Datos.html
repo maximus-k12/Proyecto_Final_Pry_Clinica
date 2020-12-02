@@ -1,0 +1,28 @@
+{% extends 'paginas/base.html' %}
+
+
+{% block contenido %}
+ <br>
+ <div class="texto_centrado_1">
+<h1>Ingrese sus datos por favor</h1>
+</div>
+<form action="" class="formulario_contacto" method="post">
+
+      {% csrf_token %}
+
+      {{ form }}
+
+
+{{mensaje}}
+
+    <br>
+    <br>
+    <button type="submit" id="btnEnviar" class="button"><h1>Guardar</h1></button>
+  <br>
+</form>
+
+<table id="tablacontactos">
+</table>
+
+
+{% endblock %}

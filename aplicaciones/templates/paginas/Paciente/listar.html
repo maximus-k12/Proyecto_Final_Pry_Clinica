@@ -1,0 +1,24 @@
+{% extends 'paginas/base.html' %}
+
+{% block contenido %}
+
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Tratamiento</th>
+    </tr>
+
+    {% for p in tratamiento%}
+
+    <tr>
+        <td>{{ p.Nombre | title }}</td>
+        &nbsp;
+        <td>{{ p.Tratamiento | title }}</td>
+    </tr>    
+
+    {% endfor %}
+
+</table>
+
+{% endblock %}

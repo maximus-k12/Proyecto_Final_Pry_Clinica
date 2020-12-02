@@ -1,0 +1,30 @@
+{% extends 'paginas/base.html' %}
+
+
+{% block contenido %}
+<br>
+<div class="texto_centrado_1">
+<h1>Editar Paciente</h1>
+</div>
+<form action=""  method="post" enctype="multipart/form-data">
+
+      {% csrf_token %}
+
+      {{ form }}
+
+
+{{mensaje}}
+
+    <br>
+    <br>
+    <button type="submit" id="btnEnviar" class="button"><h1>Editar</h1></button>
+    <input type="submit" value="Guardar" class="btn btn-primary">
+  <br>
+</form>
+
+<table id="tablacontactos">
+</table>
+
+
+{% endblock %}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Centro Medico Militar</title>
+    {% load static %}  
+
+
+    {% block css %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'app/css/estilos.css' %}">
+     
+
+</head>
+<body>
+
+ 
+    <header id="header">
+    
+        <img class="menu" src="{% static 'app/img/menuiconwhite.png' %}" alt="menu" id="menu">
+      
+        <div class="contenedor_logo">
+            <img  class="logo"  src="{% static 'app/img/ssd.png' %}" alt="logo">
+        </div> 
+            <nav id="nav">
+            <ul>
+            <li>
+            <a href="{% url 'home' %}">Principal</a>
+            </li>
+            <li>
+            <a href="{% url 'Datos' %}">Nueva cita</a>
+            </li>
+            <li>
+            <a href="{% url 'galeria' %}">Tienda</a>
+            </li>
+            <li>
+            <a href="{% url 'agregar_paciente' %}">Pacientes</a>
+            </li>
+             <li>
+            <a href="{% url 'Listar_Pacientes' %}">Listado general</a>
+            </li>
+            {% if user.is_authenticated %}
+            <li>
+                <a href="{% url  'logout' %}">Cerrar Sesion<a/>
+            </li>
+                <a href="#">@{{ user.username }}</a>
+            <li>
+            {% else %}
+            <li>
+                <a href="{% url 'login'%}">Iniciar Sesion</a>
+            </li>
+            <br><br>
+            <li>
+            <a href="{% url 'registro'%}">Registrarse</a>
+            </li>
+            {% endif %}
+            </ul>
+   
+            </nav>
+
+</header>
+
+    <div id="contenido">
+
+        {% block contenido %}
+        {% endblock %}
+
+</div>
+
+
+<footer>
+    <div class="marcas">
+        <img src="{% static 'app/img/footer/COS1.png' %}" alt="apple">
+        <img src="{% static 'app/img/footer/COS2.png' %}" alt="lenovo">
+        <img src="{% static 'app/img/footer/COS3.png' %}" alt="microsoft">
+        <img src="{% static 'app/img/footer/COS4.png' %}" alt="samsung">
+
+    </div>
+    <div class="logo_footer">
+        <img src="{% static 'app/img/abs.png' %}" alt="logo">
+    </div>
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script src="{% static 'app/js/menu.js'%}"></script>
+
+    {% block js %}
+    {% endblock %}
+
+</body>
+</html>
